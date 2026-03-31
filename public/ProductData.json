@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "AI Writing Pro",
+    "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
+    "price": "29$",
+    "period": "Monthly",
+    "tag": "Best Seller",
+    "features": [
+      "Unlimited AI generations",
+      "50+ writing templates",
+      "Grammar checker"
+    ],
+    "icon": "https://i.ibb.co.com/mrgp8pZ/ai-writer.png"
+  },
+  {
+    "id": 2,
+    "name": "Design Templates Pack",
+    "description": "2000+ premium templates for social media, presentations, and marketing materials.",
+    "price": "49$",
+    "period": "One Time",
+    "tag": "Popular",
+    "features": [
+      "2000+ templates",
+      "Monthly updates",
+      "Commercial license"
+    ],
+    "icon": "https://i.ibb.co.com/L1Xy6R6/resume.png"
+  },
+  {
+    "id": 3,
+    "name": "SEO Optimizer Tool",
+    "description": "Boost your website rankings with our all-in-one SEO and keyword research tool.",
+    "price": "199$",
+    "period": "Yearly",
+    "tag": "Top Rated",
+    "features": [
+      "Keyword research",
+      "Backlink analysis",
+      "Weekly reports"
+    ],
+    "icon": "https://i.ibb.co.com/vH4B6Lp/seo.png"
+  },
+  {
+    "id": 4,
+    "name": "UI/UX Component Kit",
+    "description": "Ready-to-use Figma components and assets for modern web applications.",
+    "price": "15$",
+    "period": "Monthly",
+    "tag": "Best Seller",
+    "features": [
+      "500+ Components",
+      "Free updates",
+      "Commercial license"
+    ],
+    "icon": "https://i.ibb.co.com/Gdf7C3V/design.png"
+  },
+  {
+    "id": 5,
+    "name": "Video Editing Suite",
+    "description": "Professional online video editor with AI-powered effects and transitions.",
+    "price": "120$",
+    "period": "Yearly",
+    "tag": "Popular",
+    "features": [
+      "4K rendering",
+      "Cloud storage",
+      "Team collaboration"
+    ],
+    "icon": "https://i.ibb.co.com/S6L6Z6M/video.png"
+  },
+  {
+    "id": 6,
+    "name": "Social Media Planner",
+    "description": "Schedule and manage all your social media accounts from a single dashboard.",
+    "price": "25$",
+    "period": "One Time",
+    "tag": "Top Rated",
+    "features": [
+      "Auto-scheduling",
+      "Detailed analytics",
+      "Customer support"
+    ],
+    "icon": "https://i.ibb.co.com/kM7Z7N9/social.png"
+  }
+]
