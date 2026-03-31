@@ -13,7 +13,7 @@ const Products = ({productsPromise}) => {
       </div>
       
       {/* card container */}
-      <div>
+      <div className="grid  md:grid-cols-2  lg:grid-cols-3 gap-5 mt-10 px-50">
         {
             productsData.map(product=> <ProductCard key={product.id} product={product}></ProductCard>)
         }
