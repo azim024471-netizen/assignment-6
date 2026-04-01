@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Features from "./Features";
 
-const ProductCard = ({product}) => {
+const ProductCard = ({product,carts, setCarts}) => {
     // console.log(product)
 
     const {name,description,price,period,tag,features,icon}=product
@@ -9,6 +9,9 @@ const ProductCard = ({product}) => {
     const [addedCart, setAddedcart] = useState(true);
     const handelBuyBtn = () => {
   setAddedcart(!addedCart); 
+ 
+  setCarts([...carts, product])
+
 };
     return (
 

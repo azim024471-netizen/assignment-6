@@ -7,7 +7,11 @@ const Products = ({productsPromise}) => {
     // console.log(productsData)
 
     const [activeTab, setActiveTab] = useState("Products");
-    console.log(activeTab)
+    // console.log(activeTab)
+    const [carts, setCarts] = useState([]);
+
+    console.log(carts)
+
     
 
 
@@ -34,12 +38,14 @@ const Products = ({productsPromise}) => {
       {/* card container */}
     { activeTab === "Products" && (<div className="grid  md:grid-cols-2  lg:grid-cols-3 gap-5 mt-10 lg:px-50">
         {
-            productsData.map(product=> <ProductCard key={product.id} product={product}></ProductCard>)
+            productsData.map(product=> <ProductCard key={product.id}  product={product}
+                carts={carts} setCarts={setCarts}
+            ></ProductCard>)
         }
         
       </div>) }
           
-          {activeTab === "Cart" && <Cart></Cart>}
+          {activeTab === "Cart" && <Cart carts={carts} setCarts={setCarts}  ></Cart>}
 
 
 
