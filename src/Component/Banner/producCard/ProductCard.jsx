@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Features from "./Features";
+import { toast } from "react-toastify";
 
 const ProductCard = ({product,carts, setCarts}) => {
     // console.log(product)
@@ -9,8 +10,20 @@ const ProductCard = ({product,carts, setCarts}) => {
     const [addedCart, setAddedcart] = useState(true);
     const handelBuyBtn = () => {
   setAddedcart(!addedCart); 
+
+
+const isExist = carts.find((item) => item.id === product.id);
+
+
+if (isExist) {
+    toast.error("Item already in cart !");
+    return
+    } 
  
-  setCarts([...carts, product])
+  setCarts([...carts, product]);
+
+  toast.success("Item Added to cart !!")
+
 
 };
     return (
@@ -67,6 +80,7 @@ const ProductCard = ({product,carts, setCarts}) => {
 
       
       <button 
+     
   onClick={handelBuyBtn} 
   className={`w-full py-4 rounded-full font-bold text-lg  duration-300 shadow-lg 
     ${addedCart 

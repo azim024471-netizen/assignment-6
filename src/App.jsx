@@ -4,6 +4,7 @@ import Banner from './Component/Banner/Banner'
 import NavBar from './Component/NavBar/NavBar'
 import Products from './Component/Products'
 import Stats from './Component/Stats'
+import Steps from './Component/Steps-Section/Steps';
 
 const productsData = async()=>{
   const res =await fetch("/ProductData.json")
@@ -34,6 +35,9 @@ function App() {
         <main>
           <Products productsPromise ={productsPromise}></Products>
         </main>
+       </section>
+       <section className='bg-[#F9FAFC]'>
+        <Steps></Steps>
        </section>
 
 

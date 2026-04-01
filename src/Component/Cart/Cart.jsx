@@ -1,13 +1,20 @@
+import { toast } from "react-toastify";
 import CartItem from "./CartItem";
 
 
 const Cart = ({ carts, setCarts })=> {
 const totalPrice = carts.reduce((sum, item) => sum + parseFloat(item.price), 0);
 
+const handelCheakout = () =>{
+    setCarts([]);
+    toast.success("Successfully cheak out!!")
+}
+
     
 const handleRemove = (id) => {
         const remaining = carts.filter(item => item.id !== id);
         setCarts(remaining);
+       toast.success("Item Removed  !!")
     };
 
 
@@ -24,7 +31,7 @@ const handleRemove = (id) => {
                         <span className="text-2xl font-bold text-gray-800">${totalPrice}</span>
                     </div>
 
-                    <button className="w-full bg-purple-600 text-white py-4 rounded-2xl font-bold text-lg mt-4 hover:bg-purple-700 transition-all">
+                    <button onClick={handelCheakout} className="w-full bg-purple-600 text-white py-4 rounded-2xl font-bold text-lg mt-4 hover:bg-purple-700 transition-all">
                         Proceed To Checkout
                     </button>
                 </div>

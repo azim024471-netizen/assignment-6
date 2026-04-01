@@ -10,7 +10,7 @@ const Products = ({productsPromise}) => {
     // console.log(activeTab)
     const [carts, setCarts] = useState([]);
 
-    console.log(carts)
+    // console.log(carts)
 
     
 
@@ -26,9 +26,13 @@ const Products = ({productsPromise}) => {
 
      <div className="tabs tabs-box justify-center bg-white">
    <input  onClick={() => setActiveTab("Products")} type="radio" 
-   name="my_tabs_1" className="tab rounded-full w-30 font-bold" aria-label=" Products" defaultChecked />
+   name="my_tabs_1"className={`tab rounded-full w-30 font-bold 
+      ${activeTab === "Products" ? "bg-linear-to-r from-blue-600 to-purple-600 text-white" : ""}
+    `} aria-label=" Products" defaultChecked />
    <input  onClick={() => setActiveTab("Cart")} type="radio"
-   name="my_tabs_1" className="tab rounded-full w-30 font-bold  " aria-label="Cart (2)" />
+   name="my_tabs_1" className={`tab rounded-full w-30 font-bold 
+      ${activeTab === "Cart" ? "bg-linear-to-r from-blue-600 to-purple-600 text-white" : ""}
+    `} aria-label={`Cart (${carts.length})`} />
   
 </div>
 
