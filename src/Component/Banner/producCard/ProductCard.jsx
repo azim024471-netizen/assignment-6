@@ -1,14 +1,19 @@
+import { useState } from "react";
 import Features from "./Features";
 
-
 const ProductCard = ({product}) => {
-    console.log(product)
+    // console.log(product)
 
     const {name,description,price,period,tag,features,icon}=product
 
+    const [addedCart, setAddedcart] = useState(true);
+    const handelBuyBtn = () => {
+  setAddedcart(!addedCart); 
+};
     return (
 
-      <div className="bg-white border border-gray-100 rounded-[16px] p-6 shadow-sm hover:shadow-xl transition-all duration-300
+      <div className="bg-white border border-gray-100 w-full rounded-2xl p-6 shadow-sm hover:shadow-xl
+       transition-all duration-300
        relative flex flex-col h-full ">
    
       <div className="flex justify-between items-start mb-6">
@@ -58,10 +63,16 @@ const ProductCard = ({product}) => {
       </div>
 
       
-      <button className="w-full bg-purple-800 hover:bg-[#A855F7] text-white py-4 rounded-full font-bold text-lg 
-       shadow-lg shadow-[#E9D5FF] ">
-        Buy Now
-      </button>
+      <button 
+  onClick={handelBuyBtn} 
+  className={`w-full py-4 rounded-full font-bold text-lg  duration-300 shadow-lg 
+    ${addedCart 
+      ? "bg-linear-to-r from-blue-600 to-purple-600 hover:opacity-90 shadow-[#E9D5FF]" 
+      : "bg-green-500 shadow-green-100 cursor-default"
+    } text-white`}
+>
+  {addedCart ? "Buy Now" : "Added To Cart"}
+</button>
     </div>
   );
 };
